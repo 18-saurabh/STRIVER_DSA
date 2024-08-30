@@ -2,13 +2,16 @@ import java.util.*;
 public class checkIfArrayIsSorted {
 
     public static int check_if_array_is_sorted(int arr[]){
-        int count=0;
         int previous_element=arr[0];
         for(int i=1;i<arr.length;i++){
              if(arr[i]>previous_element || arr[i]==previous_element){
-                
+              
+             }
+             else{
+                return 0;
              }
         }
+        return 1;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -24,7 +27,6 @@ public class checkIfArrayIsSorted {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-
         System.out.println(check_if_array_is_sorted(arr));
 
     }
