@@ -21,7 +21,7 @@ public class leftRotateArayByKPlace {
     }
 
     public static void main(String args[]) {
-        int[] arr = { 2,3,45,67};
+        int[] arr = { 2, 3, 45, 67 };
         int n = 4;
         int k = 2;
         Rotateeletoleft(arr, n, k);

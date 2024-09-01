@@ -2,7 +2,7 @@ import java.util.*;
 
 public class secondLargestElementInArray {
     public static int second_Largest_Element_In_Array(int arr[]) {
-        // int largest_element=arr[0];                                //T.C=O(2N)
+        // int largest_element=arr[0]; //T.C=O(2N)
         // int s_largest_element=-1;
         // for (int i = 1; i < arr.length; i++) {
         // if (arr[i] > largest_element) {
@@ -16,14 +16,13 @@ public class secondLargestElementInArray {
         // }
         // return s_largest_element;
 
-        int largest_element = arr[0];                            // T.C=O(N)
+        int largest_element = arr[0]; // T.C=O(N)
         int s_largest_element = -1;
         for (int i = 1; i < arr.length; i++) {
             if (arr[i] > largest_element) {
                 s_largest_element = largest_element;
                 largest_element = arr[i];
-            }
-            else if (arr[i] < largest_element && arr[i]>s_largest_element) {
+            } else if (arr[i] < largest_element && arr[i] > s_largest_element) {
                 s_largest_element = arr[i];
             }
         }

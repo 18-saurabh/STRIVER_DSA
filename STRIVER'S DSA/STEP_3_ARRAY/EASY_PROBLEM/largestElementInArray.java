@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class largestElementInArray {
     public static int largest_Element_In_Array(int arr[]) {
-        int largest_element=arr[0];                         //T.C=O(N)
-        for(int i=0;i<arr.length;i++){
-            if(arr[i]>largest_element){
-                largest_element=arr[i];
+        int largest_element = arr[0]; // T.C=O(N)
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > largest_element) {
+                largest_element = arr[i];
             }
         }
         System.out.println("Largest Element in array is");
@@ -29,7 +29,6 @@ public class largestElementInArray {
         System.out.println();
 
         System.out.println(largest_Element_In_Array(arr));
-
 
     }
 }
