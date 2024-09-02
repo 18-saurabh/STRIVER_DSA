@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class findMissingNumberInArray {
 
-    public static int missingNumber(int arr[],int n){
+    public static int better_missingNumber(int arr[],int n){
         int sum_1=0;
         int sum_2=0;
         for(int i=0;i<n+1;i++){
@@ -31,6 +31,17 @@ public class findMissingNumberInArray {
         }
         return 1;
     }
+
+    public static int optimal_missingNumber(int arr[], int n) {
+        int sum_1 = n*(n+1)/2;
+        int sum_2 = 0;
+        
+        for (int i = 0; i < n; i++) {
+            sum_2 += arr[i];
+        }
+        int difference = sum_1 - sum_2;
+        return difference;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter size of the array");
@@ -45,7 +56,7 @@ public class findMissingNumberInArray {
             System.out.print(arr[i] + " ");
         }
         System.out.println();
-        System.out.println(bruteMissingNumber(arr));
+        System.out.println(optimal_missingNumber(arr, n));
 
     }
 }
