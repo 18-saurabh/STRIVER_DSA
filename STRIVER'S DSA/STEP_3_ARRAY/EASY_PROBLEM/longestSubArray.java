@@ -1,5 +1,6 @@
 import java.util.Scanner;
-
+import java.util.HashMap;
+import java.util.Map;
 public class longestSubArray {
     // Function to find the length of the longest subarray with sum K
     public static int brute_lenOfLongSubarr(int A[], int N, int K) {
@@ -16,7 +17,38 @@ public class longestSubArray {
         return len; // Return the length of the longest subarray with sum K
     }
 
-    
+
+    public static int better_lenOfSubarr(int A[],int N,long K){        //for positive and negative number in array
+        // Declare a HashMap to store prefix sums and their indices
+        Map<Long, Integer> prefixSum = new HashMap<>();
+        int maxLen = 0;
+        long sum = 0;
+
+        for (int i = 0; i < N; i++) {
+            sum += A[i]; // Update the current sum
+
+            // Check if the sum itself is equal to K
+            if (sum == K) {
+                maxLen = Math.max(maxLen, i + 1); // Update maxLen if the entire subarray from the start sums to K
+            }
+
+            // Calculate the remainder that would need to exist in the map
+            long rem = sum - K;
+
+            // Check if this remainder has been seen before
+            if (prefixSum.containsKey(rem)) {
+                int len = i - prefixSum.get(rem); // Calculate the length of the subarray
+                maxLen = Math.max(maxLen, len); // Update maxLen if this subarray is longer
+            }
+
+            // If the current sum has not been seen before, add it to the map
+            if (!prefixSum.containsKey(sum)) {
+                prefixSum.put(sum, i);
+            }
+        }
+
+        return maxLen; // Return the length of the longest subarray with sum K
+    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -39,7 +71,7 @@ public class longestSubArray {
         int K = scanner.nextInt();
 
         // Call the function and print the result
-        int result = brute_lenOfLongSubarr(A, N, K);
+        int result = better_lenOfSubarr(A, N, K);
         System.out.println("Length of the longest subarray with sum " + K + " is: " + result);
     }
 }
