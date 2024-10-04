@@ -29,6 +29,6 @@ public class largestElementInArray {
         System.out.println();
 
         System.out.println(largest_Element_In_Array(arr));
-
+        sc.close();
     }
 }

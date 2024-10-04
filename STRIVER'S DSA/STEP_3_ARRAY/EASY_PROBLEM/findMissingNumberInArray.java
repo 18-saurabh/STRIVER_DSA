@@ -57,6 +57,6 @@ public class findMissingNumberInArray {
         }
         System.out.println();
         System.out.println(optimal_missingNumber(arr, n));
-
+sc.close();
     }
 }

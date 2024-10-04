@@ -28,5 +28,6 @@ public class leftRotateArrayByOnePlace {
         }
         System.out.println();
         left_Rotate_Array_By_One_Place(arr, n);
+        sc.close();
     }
 }

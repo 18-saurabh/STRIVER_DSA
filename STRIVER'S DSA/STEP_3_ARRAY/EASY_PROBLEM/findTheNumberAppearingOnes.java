@@ -45,5 +45,6 @@ public class findTheNumberAppearingOnes {
         }
         System.out.println();
         System.out.println(brute_AppearingOnes(arr));
+        sc.close();
     }
 }

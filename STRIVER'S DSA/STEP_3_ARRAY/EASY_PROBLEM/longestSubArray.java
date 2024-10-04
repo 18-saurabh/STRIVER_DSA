@@ -1,6 +1,7 @@
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
+
 public class longestSubArray {
     // Function to find the length of the longest subarray with sum K
     public static int brute_lenOfLongSubarr(int A[], int N, int K) {
@@ -17,8 +18,7 @@ public class longestSubArray {
         return len; // Return the length of the longest subarray with sum K
     }
 
-
-    public static int better_lenOfSubarr(int A[],int N,long K){        //for positive and negative number in array
+    public static int better_lenOfSubarr(int A[], int N, long K) { // for positive and negative number in array
         // Declare a HashMap to store prefix sums and their indices
         Map<Long, Integer> prefixSum = new HashMap<>();
         int maxLen = 0;
@@ -73,5 +73,6 @@ public class longestSubArray {
         // Call the function and print the result
         int result = better_lenOfSubarr(A, N, K);
         System.out.println("Length of the longest subarray with sum " + K + " is: " + result);
+        scanner.close();
     }
 }

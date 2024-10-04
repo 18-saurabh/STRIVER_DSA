@@ -29,6 +29,6 @@ public class checkIfArrayIsSorted {
         }
         System.out.println();
         System.out.println(check_if_array_is_sorted(arr));
-
+        sc.close();
     }
 }

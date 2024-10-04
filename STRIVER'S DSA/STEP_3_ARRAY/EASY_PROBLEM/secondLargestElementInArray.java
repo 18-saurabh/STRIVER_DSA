@@ -45,6 +45,6 @@ public class secondLargestElementInArray {
         System.out.println();
 
         System.out.println(second_Largest_Element_In_Array(arr));
-
+sc.close();
     }
 }

@@ -1,6 +1,5 @@
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
@@ -93,5 +92,7 @@ public class findTheUnion {
         System.out.println("Union of arr1 and arr2 is ");
         for (int val : Union)
             System.out.print(val + " ");
+        
+    scanner.close();
     }
 }

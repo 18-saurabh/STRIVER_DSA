@@ -27,6 +27,6 @@ public class removeDuplicateFromArray {
         }
         System.out.println();
         System.out.println(remove_Duplicate_From_Sorted_Array(arr));
-
+        sc.close();
     }
 }

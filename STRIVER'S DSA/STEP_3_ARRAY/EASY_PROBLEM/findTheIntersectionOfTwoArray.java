@@ -68,5 +68,6 @@ public class findTheIntersectionOfTwoArray {
         for (int i : storage) {
             System.out.print(i + " ");
         }
+        scanner.close();
     }
 }

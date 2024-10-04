@@ -60,5 +60,6 @@ public class rightRotateArrayByKPlace {
         for (int i = 0; i < storage.length; i++) {
             System.out.print(storage[i] + " ");
         }
+        sc.close();
     }
 }
