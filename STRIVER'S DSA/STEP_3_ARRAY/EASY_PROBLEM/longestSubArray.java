@@ -50,6 +50,23 @@ public class longestSubArray {
         return maxLen; // Return the length of the longest subarray with sum K
     }
 
+    public int lenOfLongestSubarr(int[] arr, int k) {
+        // code here
+        Map<Integer, Integer> mpp = new HashMap<>();
+        int maxi = 0;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (sum == k) {
+                maxi = i + 1;
+            }
+            if (mpp.containsKey(sum - k)) {
+                maxi = Math.max(maxi, i - mpp.get(sum - k));
+            }
+            mpp.putIfAbsent(sum, i);
+        }
+        return maxi;
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -1,6 +1,5 @@
 public class linearSearch {
     static int searchInSorted(int arr[], int N, int K) {
-
         // Your code here
         for (int i = 0; i < N; i++) {
             if (arr[i] == K) {
