@@ -1,7 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-
 public class findRepeatingAndMissingNumbers {
     ArrayList<Integer> brute_findTwoElement(int arr[]) {
         // code here
