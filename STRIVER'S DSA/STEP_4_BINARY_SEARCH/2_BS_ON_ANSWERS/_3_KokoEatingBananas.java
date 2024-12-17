@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class _3_KokoEatingBananas {
+public class _3_kokoEatingBananas {
     public int brute_minEatingSpeed(int[] piles, int h) {
         int maxElement = Arrays.stream(piles).max().getAsInt();// Finds maximum from the array
         for (int i = 1; i <= maxElement; i++) {
