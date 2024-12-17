@@ -11,7 +11,6 @@ public class _3_kokoEatingBananas {
         }
         return 0;
     }
-
     public int requireHour(int[] arr, int hourly) {
         int n = arr.length;
         int totalHours = 0;
