@@ -40,4 +40,18 @@ public class _8_removeNthNodeFromBackwardOfLL {
         temp.next = temp.next.next;
         return head;
     }
+    public ListNode optimal_removeNthFromEnd(ListNode head, int n) {
+        ListNode slow=head;
+        ListNode fast=head;
+        for(int i=1;i<=n;i++){
+            fast=fast.next;
+        }
+        if(fast==null)return head.next;
+        while(fast.next!=null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+        slow.next=slow.next.next;
+        return head;
+    }
 }
