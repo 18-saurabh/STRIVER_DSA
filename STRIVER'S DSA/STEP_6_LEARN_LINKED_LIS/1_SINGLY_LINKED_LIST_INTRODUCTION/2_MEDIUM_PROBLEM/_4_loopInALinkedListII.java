@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+
 public class _4_loopInALinkedListII {
     static class ListNode {
         int val;
@@ -26,16 +27,16 @@ public class _4_loopInALinkedListII {
     }
 
     public static ListNode firstNode(ListNode head) {
-        ListNode slow=head;
-        ListNode fast=head;
-        while(fast!=null && fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
-            if(slow==fast){
-                slow=head;
-                while(slow!=fast){
-                    slow=slow.next;
-                    fast=fast.next;
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+            if (slow == fast) {
+                slow = head;
+                while (slow != fast) {
+                    slow = slow.next;
+                    fast = fast.next;
                 }
                 return slow;
             }
