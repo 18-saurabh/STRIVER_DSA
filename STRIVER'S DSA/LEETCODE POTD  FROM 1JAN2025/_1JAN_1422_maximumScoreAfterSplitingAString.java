@@ -1,4 +1,4 @@
-public class _1JAN_maximumScoreAfterSplitingAString {
+public class _1JAN_1422_maximumScoreAfterSplitingAString {
     public int maxScore(String s) {
         int totalOnes = 0;
         for (char c : s.toCharArray()) {
