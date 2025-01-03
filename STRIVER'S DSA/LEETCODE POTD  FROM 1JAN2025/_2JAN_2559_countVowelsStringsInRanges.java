@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class _2_JAN_2559_countVowelsStringsInRanges {
+public class _2JAN_2559_countVowelsStringsInRanges {
     static Set<Character> vowels = new HashSet<>(Arrays.asList('a', 'e', 'i', 'o', 'u'));
 
     // Step 2: Helper function to check if a word starts and ends with a vowel
