@@ -1,5 +1,3 @@
-
-
 public class _3_remvoeDuplicatedFromDLL {
     class Node {
         int data;
