@@ -21,6 +21,6 @@ public class _23JAN_1267_countServersThatCommunicate {
             }
         }
         return count;
-
+        
     }
 }
