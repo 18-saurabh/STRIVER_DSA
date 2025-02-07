@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class _7FEB_3160_findTheNumberOfDistinctColorsAmongTheBalls {
     public int[] countDistinctColors(int limit, int[][] queries) {
         Map<Integer, Integer> ballColorMap = new HashMap<>(); // Maps ball -> color
