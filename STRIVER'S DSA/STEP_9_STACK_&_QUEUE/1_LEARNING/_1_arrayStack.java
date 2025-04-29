@@ -1,8 +1,8 @@
-public class arrayStack {
+public class _1_arrayStack {
     private int top;
     private int[] st_arr;
 
-    public arrayStack() {
+    public _1_arrayStack() {
         top = -1;
         st_arr = new int[10];
     }
