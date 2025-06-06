@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class _5_aestroidCollision {
-    public int [] asteroidCollision(int[] asteroids) {
+    public int[] asteroidCollision(int[] asteroids) {
         List<Integer> stack = new ArrayList<>();
         for (int i = 0; i < asteroids.length; i++) {
             if (asteroids[i] > 0) {
